@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: helvetica;
+}
+
+.marquee {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  /* height: 35px; */
+  width: 100%;
+  color: white;
+  animation: marquee 50s linear infinite;
+}
+
+.marquee div {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
